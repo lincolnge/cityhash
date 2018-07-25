@@ -67,7 +67,7 @@ napi_value Hash64(napi_env env, napi_callback_info info) {
   uint64 hash = CityHash64(str, strlen(str));
   napi_value return_result;
 
-  ASSERT_NAPI_OK(napi_create_uint32(env, hash, &return_result));
+  ASSERT_NAPI_OK(napi_create_int64(env, hash, &return_result));
 
   return return_result;
 }

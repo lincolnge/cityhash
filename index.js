@@ -1,12 +1,15 @@
 'use strict'
 const cityhash = require('bindings')('cityhash')
 
+// 十进制。
+const decimal = 10
+
 function hash32 (data) {
-  return cityhash.hash32(stringifyObject(data)).toString(16)
+  return cityhash.hash32(stringifyObject(data)).toString(decimal)
 }
 
 function hash64 (data) {
-  return cityhash.hash64(stringifyObject(data)).toString(16)
+  return cityhash.hash64(stringifyObject(data)).toString(decimal)
 }
 
 function stringifyObject (obj) {

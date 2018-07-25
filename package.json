@@ -4,7 +4,10 @@
   "description": "Cityhash for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/standard && node-gyp rebuild && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
+    "test-a": "./node_modules/.bin/standard && node-gyp rebuild && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "test-b": "node-gyp rebuild && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "fix": "./node_modules/.bin/standard --fix",
+    "test": " ./node_modules/.bin/_mocha"
   },
   "repository": {
     "type": "git",
